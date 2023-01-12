@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+*::selection{
+  color: violet;
+  background-color: teal;
+}
+
 /* ENCABEZADO */
 
 a {
@@ -53,6 +58,10 @@ header {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+.nombreConsultora::first-letter{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 nav ul {
   display: flex;
   flex-direction: row;
@@ -73,6 +82,10 @@ nav ul li{
   border-radius: 3px;
 }
 
+nav ul li:nth-child(5) a{
+  color: beige;
+}
+
 ul li a{
   display: block;
   text-decoration: none;
@@ -83,8 +96,7 @@ ul li a{
   text-align: center;
 }
 
-ul li a:hover,
-ul li a:active{
+ul li a:hover{
   color:whitesmoke;
   background-color: rgb(253, 137, 95);
   transition: .5s;
@@ -514,6 +526,7 @@ section form {
   
   nav{
     grid-area: menu;
+    overflow: hidden;
   }
 
   nav ul li{
