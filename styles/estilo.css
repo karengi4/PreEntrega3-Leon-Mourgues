@@ -1,0 +1,421 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+  *::selection {
+    color: violet;
+    background-color: teal; }
+
+a {
+  text-decoration: none;
+  list-style-type: none; }
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-rows: 0.5fr 1fr 0.5fr;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header" "main" "footer";
+  grid-row-gap: 5px;
+  grid-column-gap: 5px;
+  padding-top: 130px; }
+
+header {
+  width: 100%;
+  background: #01ced1;
+  grid-area: header;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  position: fixed;
+  top: 0;
+  left: 0; }
+  header .logo {
+    width: 140px;
+    height: 140px; }
+  header .nombreConsultora {
+    flex-basis: 20%;
+    font-size: 1rem;
+    color: rgba(250, 102, 49, 0.747);
+    font-family: Georgia, 'Times New Roman', Times, serif; }
+    header .nombreConsultora::first-letter {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; }
+  header nav {
+    flex-basis: 60%; }
+    header nav ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      color: white;
+      line-height: 40px; }
+      header nav ul li {
+        width: 10vw;
+        font-size: 1.25rem;
+        font-weight: bold;
+        text-align: center;
+        align-content: center;
+        list-style: none;
+        border-radius: 3px; }
+        header nav ul li:nth-child(5) a {
+          color: beige; }
+        header nav ul li a {
+          display: block;
+          text-decoration: none;
+          text-transform: uppercase;
+          cursor: pointer;
+          border-radius: 3px;
+          text-align: center; }
+          header nav ul li a:hover {
+            color: whitesmoke;
+            background-color: #fd895f;
+            transition: 0.5s; }
+
+main {
+  padding: 15px;
+  grid-area: main; }
+
+footer {
+  background-color: #01ced1;
+  width: 100%;
+  text-align: center;
+  grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  footer div .footer {
+    font-size: 0.8rem;
+    color: black; }
+  footer div .iconos {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(245, 245, 245, 0.437); }
+
+.bienvenida {
+  word-spacing: 30px;
+  line-height: 50px;
+  font-family: 'Rubik Glitch', cursiva;
+  text-align: center;
+  font-size: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  align-content: center; }
+
+.menuNosotros {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "nosotrosUno nosotrosDos nosotrosTres";
+  grid-column-gap: 5px; }
+  .menuNosotros .nosotros {
+    background-color: #f19c7d;
+    padding: 20px;
+    border-radius: 15px;
+    margin-left: 1%;
+    font-size: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .menuNosotros .nosotros .nosotrosImagen {
+      width: 100%;
+      height: 50%; }
+    .menuNosotros .nosotros .nosotrosTitulo {
+      color: darkmagenta;
+      font-weight: bold;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
+    .menuNosotros .nosotros .nosotrosParrafo {
+      text-align: justify;
+      color: black; }
+  .menuNosotros .nosotrosUno {
+    grid-area: nosotrosUno; }
+  .menuNosotros .nosotrosDos {
+    grid-area: nosotrosDos; }
+  .menuNosotros .nosotrosTres {
+    grid-area: nosotrosTres; }
+
+#servicios {
+  font-size: 1.25rem;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "servicioUno servicioDos servicioTres" "servicioCuatro servicioCinco servicioSeis";
+  grid-column-gap: 5px; }
+  #servicios .servicioUno {
+    grid-area: servicioUno; }
+    #servicios .servicioUno .serviciosTitulo {
+      color: darkmagenta;
+      list-style-type: none;
+      font-weight: bold;
+      line-height: 50px; }
+    #servicios .servicioUno .serviciosParrafo {
+      background-color: #f19c7d;
+      border-radius: 10%;
+      padding: 15px; }
+  #servicios .servicioDos {
+    grid-area: servicioDos; }
+    #servicios .servicioDos .serviciosTitulo {
+      color: darkmagenta;
+      list-style-type: none;
+      font-weight: bold;
+      line-height: 50px; }
+    #servicios .servicioDos .serviciosParrafo {
+      background-color: #f19c7d;
+      border-radius: 10%;
+      padding: 15px; }
+  #servicios .servicioTres {
+    grid-area: servicioTres; }
+    #servicios .servicioTres .serviciosTitulo {
+      color: darkmagenta;
+      list-style-type: none;
+      font-weight: bold;
+      line-height: 50px; }
+    #servicios .servicioTres .serviciosParrafo {
+      background-color: #f19c7d;
+      border-radius: 10%;
+      padding: 15px; }
+  #servicios .servicioCuatro {
+    grid-area: servicioCuatro; }
+    #servicios .servicioCuatro .serviciosTitulo {
+      color: darkmagenta;
+      list-style-type: none;
+      font-weight: bold;
+      line-height: 50px; }
+    #servicios .servicioCuatro .serviciosParrafo {
+      background-color: #f19c7d;
+      border-radius: 10%;
+      padding: 15px; }
+  #servicios .servicioCinco {
+    grid-area: servicioCinco; }
+    #servicios .servicioCinco .serviciosTitulo {
+      color: darkmagenta;
+      list-style-type: none;
+      font-weight: bold;
+      line-height: 50px; }
+    #servicios .servicioCinco .serviciosParrafo {
+      background-color: #f19c7d;
+      border-radius: 10%;
+      padding: 15px; }
+  #servicios .servicioSeis {
+    grid-area: servicioSeis; }
+    #servicios .servicioSeis .serviciosTitulo {
+      color: darkmagenta;
+      list-style-type: none;
+      font-weight: bold;
+      line-height: 50px; }
+    #servicios .servicioSeis .serviciosParrafo {
+      background-color: #f19c7d;
+      border-radius: 10%;
+      padding: 15px; }
+
+.busquedas {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 70px;
+  text-align: center; }
+
+.menuBusquedas {
+  font-size: 1.25rem;
+  font-weight: 500;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr; }
+  .menuBusquedas div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between; }
+    .menuBusquedas div .busquedasRecuadro {
+      background-color: #f19c7d;
+      border-radius: 15px;
+      color: black;
+      line-height: 1.7em;
+      margin: 20px 10px 30px 15px;
+      flex-basis: 180px; }
+      .menuBusquedas div .busquedasRecuadro .button {
+        background-color: rgba(255, 127, 80, 0.425);
+        border-radius: 10%;
+        padding-right: 20px;
+        padding-left: 20px;
+        border: 2px solid blueviolet;
+        cursor: pointer; }
+        .menuBusquedas div .busquedasRecuadro .button:hover {
+          background-color: #df5827; }
+
+.contacto {
+  font-size: 1.25rem;
+  line-height: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.5fr 0.5fr;
+  grid-template-areas: "encabezado encabezado" "formulario video";
+  grid-column-gap: 80px; }
+  .contacto .encabezadoContacto {
+    font-family: 'Rubik Glitch', cursiva;
+    font-weight: 600;
+    text-align: center;
+    grid-area: encabezado; }
+  .contacto section form {
+    color: black;
+    grid-area: formulario;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    padding: 20px;
+    box-shadow: inset 0 -3em 3em rgba(243, 88, 49, 0.753), 0 0 0 2px rgba(167, 19, 180, 0.527), 0.3em 0.3em 1em rgba(229, 123, 233, 0.952);
+    align-self: center;
+    justify-self: center; }
+    .contacto section form fieldset div .itemForm {
+      margin: 15px; }
+    .contacto section form fieldset div .inputContacto {
+      padding: 1% 5% 1% 4%; }
+    .contacto section form fieldset .casillasForm {
+      margin: 15px; }
+    .contacto section form .textAreaForm {
+      height: 100px;
+      width: 100%; }
+    .contacto section form .casillasForm {
+      margin: 15px; }
+    .contacto section form .botonesForm {
+      background-color: rgba(255, 127, 80, 0.425);
+      padding: 5px;
+      border-radius: 10px;
+      color: aliceblue;
+      cursor: pointer; }
+      .contacto section form .botonesForm:hover {
+        background-color: #df5827;
+        transform: translate(20px); }
+  .contacto .videoContacto {
+    grid-area: video;
+    align-self: center;
+    justify-self: center; }
+
+/* MODIFICADO EL PUNTO DE QUIEBRE 768px */
+@media screen and (max-width: 768px) {
+  header {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "logo nombreConsultora" "nav nav";
+    align-items: center;
+    align-self: center; }
+    header .logo {
+      grid-area: logo; }
+    header .nombreConsultora {
+      grid-area: nombreConsultora; }
+    header nav {
+      grid-area: nav; }
+  main .contacto {
+    font-size: 1.25rem;
+    line-height: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr;
+    grid-template-areas: "encabezado" "formulario" "video";
+    grid-row-gap: 10px; }
+  main .menuNosotros {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "nosotrosUno" "nosotrosDos" "nosotrosTres";
+    grid-row-gap: 5px; }
+  main section .menuBusquedas {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr; }
+  main section .encabezadoContacto {
+    font-family: 'Rubik Glitch', cursiva;
+    font-weight: 300;
+    justify-self: flex-start; }
+  main section form {
+    padding: 2px;
+    align-self: flex-start; }
+    main section form fieldset div label .itemForm {
+      margin: 1px; }
+    main section form fieldset div input .inputContacto {
+      padding: 0%; }
+    main section form fieldset label .casillasForm {
+      margin: 10px; } }
+
+/* MODIFICADO EL PUNTO DE QUIEBRE 425px */
+@media screen and (max-width: 425px) {
+  header {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 0.5fr;
+    grid-template-areas: "logo" "nombreConsultora" "menu";
+    align-items: center; }
+    header span {
+      width: 100%;
+      grid-area: logo; }
+      header span .logo a img {
+        width: 40px;
+        margin-top: 30px;
+        margin-left: 180px; }
+      header span .nombreConsultora {
+        grid-area: nombreConsultora;
+        font-size: 0.6rem; }
+    header nav {
+      grid-area: menu;
+      overflow: hidden; }
+      header nav ul li {
+        width: 100%;
+        font-size: 0.6rem; }
+        header nav ul li a {
+          text-decoration: none;
+          text-transform: uppercase;
+          cursor: pointer;
+          padding: 2px;
+          border-radius: 3px; }
+  main div section .bienvenida {
+    font-size: 0.6rem; }
+  main div h4 .nosotrosTitulo {
+    font-size: 0.8rem;
+    line-height: 1rem;
+    padding-top: 1rem;
+    font-weight: bold; }
+  main div p .nosotrosParrafo {
+    font-size: 0.6rem;
+    line-height: 1rem;
+    padding-top: 1rem; }
+  main ul #servicios {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "servicioUno servicioDos" "servicioTres servicioCuatro" "servicioCinco none";
+    font-size: 0.5rem; }
+  main h4 #busquedas {
+    font-size: 0.6rem; }
+  main section .menuBusquedas {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    font-size: 0.5rem; }
+  main .contacto {
+    font-size: 0.6rem;
+    grid-template-columns: 90vw; }
+  main iframe .videoContacto {
+    grid-area: video;
+    width: 90vw; } }
+
+/* MODIFICADO EL PUNTO DE QUIEBRE 320px */
+@media screen and (max-width: 320px) {
+  header span .logo a img {
+    width: 40px;
+    margin-top: 30px;
+    margin-left: 130px; }
+  main ul #servicios {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: "servicioUno" "servicioDos" "servicioTres" "servicioCuatro" "servicioCinco"; }
+  main section .menuBusquedas {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat 8, 1fr; } }

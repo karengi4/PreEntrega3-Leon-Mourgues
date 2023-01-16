@@ -1,0 +1,79 @@
+.contacto {
+  font-size: 1.25rem;
+  line-height: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.5fr 0.5fr;
+  grid-template-areas: 
+  "encabezado encabezado"
+  "formulario video";
+  grid-column-gap: 80px;
+
+  .encabezadoContacto {
+    font-family: 'Rubik Glitch', cursiva;
+    font-weight: 600;
+    text-align: center; 
+    grid-area: encabezado;
+  }
+
+  section {
+    form{ 
+      color: black;
+      grid-area: formulario;
+      display: flex;
+      flex-direction: column;
+      align-content: space-between;
+      padding: 20px;
+      box-shadow:
+       inset 0 -3em 3em rgba(243, 88, 49, 0.753),
+             0 0  0 2px rgba(167, 19, 180, 0.527),
+             0.3em 0.3em 1em rgba(229, 123, 233, 0.952);
+      align-self: center;
+      justify-self: center;
+  
+      fieldset{
+        div{
+          .itemForm{
+            margin: 15px;
+          }
+      
+          .inputContacto{
+          padding: 1% 5% 1% 4%
+          }
+        }
+              
+        .casillasForm{
+          margin: 15px;
+        } 
+      }
+  
+      .textAreaForm{
+        height: 100px;
+        width: 100%;
+      }
+          
+      .casillasForm{
+        margin: 15px;
+      }
+  
+      .botonesForm {
+        background-color: $colorbutton;
+        padding: 5px;
+        border-radius: 10px;
+        color: aliceblue;
+        cursor: pointer;
+  
+        &:hover {
+          background-color: $colorhover;
+          transform: translate(20px);
+        }
+      }
+    }
+  }
+  
+  .videoContacto {
+    grid-area: video;
+    align-self: center;
+    justify-self: center;
+  }
+}

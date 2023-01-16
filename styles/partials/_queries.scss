@@ -1,0 +1,261 @@
+@media screen and (max-width: 1400px) {
+}   
+
+@media screen and (max-width: 1200px) { 
+}
+
+@media screen and (max-width: 1024px) {
+}
+
+/* MODIFICADO EL PUNTO DE QUIEBRE 768px */
+@media screen and (max-width: 768px) {
+  
+  header {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "logo nombreConsultora"
+    "nav nav";
+    align-items: center;
+    align-self: center;
+          
+    .logo {
+      grid-area: logo;
+    }
+
+    .nombreConsultora{
+      grid-area: nombreConsultora;
+    }
+
+    nav{
+      grid-area: nav;
+    }
+  } 
+
+  main{
+    .contacto {
+      font-size: 1.25rem;
+      line-height: 30px;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.5fr 0.5fr 0.5fr;
+      grid-template-areas: 
+      "encabezado"
+      "formulario"
+      "video";
+      grid-row-gap: 10px;
+    }
+
+    .menuNosotros{
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-areas: 
+      "nosotrosUno"
+      "nosotrosDos"
+      "nosotrosTres";
+      grid-row-gap: 5px;
+    }
+
+    section{
+      .menuBusquedas {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+      }
+
+      .encabezadoContacto {
+        font-family: 'Rubik Glitch', cursiva;
+        font-weight: 300;
+        justify-self: flex-start;
+      }
+
+      form {
+        padding: 2px;
+        align-self:flex-start;
+
+        fieldset{
+          div{
+            label{
+              .itemForm {
+                margin: 1px;
+              }
+            }
+
+            input{
+              .inputContacto {
+                padding: 0%;
+              }
+            }
+          }
+
+          label{
+            .casillasForm {
+              margin: 10px;
+            } 
+          }
+        }
+      }
+    }
+  }
+}
+
+  
+
+@media screen and (max-width: 600px) {
+}
+
+@media screen and (max-width: 480px) {  
+}
+
+/* MODIFICADO EL PUNTO DE QUIEBRE 425px */
+@media screen and (max-width: 425px) {
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 0.5fr;
+    grid-template-areas: 
+    "logo"
+    "nombreConsultora"
+    "menu";
+    align-items: center;
+
+    span{
+      width:100%; 
+      grid-area:logo;
+
+      .logo a img{
+        width:40px;
+        margin-top: 30px; 
+        margin-left: 180px;
+      }
+
+      .nombreConsultora{
+        grid-area: nombreConsultora;
+        font-size:0.6rem;
+      }
+    }
+
+    nav{
+      grid-area: menu;
+      overflow: hidden;
+
+      ul{
+        li{
+          width: 100%;
+          font-size: 0.6rem;
+
+          a{
+            text-decoration: none;
+            text-transform: uppercase;
+            cursor:pointer;
+            padding: 2px;
+            border-radius: 3px;
+          }
+        }
+      }       
+    }
+  }
+
+  main{
+  
+    div{
+      section{
+        .bienvenida{
+          font-size: 0.6rem;
+        }
+      }
+
+      h4{
+        .nosotrosTitulo{
+          font-size: 0.8rem;
+          line-height: 1rem;
+          padding-top: 1rem;
+          font-weight: bold;
+        }
+      }
+
+      p{
+        .nosotrosParrafo{
+          font-size: 0.6rem;
+          line-height: 1rem;
+          padding-top: 1rem;
+        }
+      }
+    }
+
+    ul{
+      #servicios {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "servicioUno servicioDos"
+        "servicioTres servicioCuatro"
+        "servicioCinco none";
+        font-size: 0.5rem;
+      } 
+    }
+
+    h4{
+      #busquedas{
+        font-size: 0.6rem;
+      }
+    }
+
+    section{
+      .menuBusquedas {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        font-size: 0.5rem;
+       }
+    }
+
+    .contacto {
+      font-size: 0.6rem;
+      grid-template-columns:90vw;
+    }
+
+    iframe{
+      .videoContacto {
+        grid-area: video;
+        width: 90vw;
+      }
+    }
+  }
+}
+
+/* MODIFICADO EL PUNTO DE QUIEBRE 320px */
+@media screen and (max-width: 320px) {
+
+  header{
+    span{
+      .logo a img{
+        width:40px;
+        margin-top: 30px;
+        margin-left: 130px;
+      }
+    }
+  }
+
+  main{
+    ul{
+      #servicios {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-areas: 
+        "servicioUno"
+        "servicioDos"
+        "servicioTres"
+        "servicioCuatro"
+        "servicioCinco";
+      } 
+    }
+
+    section{
+      .menuBusquedas {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat (8, 1fr);
+      }
+    }
+  }
+}

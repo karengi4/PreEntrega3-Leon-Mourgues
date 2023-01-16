@@ -1,0 +1,25 @@
+{
+  "name": "preentrega3-leonmourgues",
+  "version": "1.0.0",
+  "description": "Tercer Pre Entrega - Comisión 33145  - CODER  HOUSE",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss styles/estilo.scss styles/estilo.css", 
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karengi4/PreEntrega3-Leon-Mourgues.git"
+  },
+  "author": "Karen Leon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karengi4/PreEntrega3-Leon-Mourgues/issues"
+  },
+  "homepage": "https://github.com/karengi4/PreEntrega3-Leon-Mourgues#readme",
+  "devDependencies": {
+    "node-sass": "^8.0.0",
+    "nodemon": "^2.0.20"
+  }
+}
