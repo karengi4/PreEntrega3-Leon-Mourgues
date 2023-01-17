@@ -87,29 +87,14 @@
     "nombreConsultora"
     "menu";
 
-    span{    
-      .logo a img{
-        grid-area:logo;
-      }
-
-      .nombreConsultora{
-        grid-area: nombreConsultora;
-        font-size:0.6rem;
-      }
-    }
-
     nav{
       grid-area: menu;
       overflow: hidden;
       
-      ul{
-        
-        li{
-          font-size: 0.6rem;
-          
+      ul{     
+        li{       
           a{
             text-decoration: none;
-            text-transform: uppercase;
             cursor:pointer;
             padding: 2px;
             border-radius: 3px;

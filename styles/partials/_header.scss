@@ -27,7 +27,7 @@ header {
 
   nav{
     flex-basis: 60%;
-    font-size: 1rem;
+    
     
     ul {
       display: flex;
@@ -36,9 +36,14 @@ header {
       align-items:center;
       color: white;
       line-height: 40px;
+      
+      @for $i from 1 through 5{
+        .menuItem:nth-child(#{$i}){
+          animation-delay: $i *0.5s;
+        }
+      }
 
       li{
-        font-size: 1.25rem;
         font-weight: bold;
         text-align:center;
         align-content: center;
@@ -53,11 +58,10 @@ header {
         a{
           display: block;
           text-decoration: none;
-          text-transform:uppercase;
           cursor: pointer;
           border-radius: 3px;
           text-align: center;
-                    
+
           &:hover{
             color:whitesmoke;
             background-color: rgb(253, 137, 95);
