@@ -3,6 +3,7 @@
   font-weight:500;
   line-height: 70px;
   text-align: center;
+  margin: 16px;
 }
 .menuBusquedas {
   font-size: 1.25rem;
@@ -26,7 +27,7 @@
       border-radius: 15px;
       color:black;
       line-height: 1.7em;
-      margin: 20px 10px 30px 15px;
+      margin: 20px 10px;
       flex-basis: 180px;
 
       .button {

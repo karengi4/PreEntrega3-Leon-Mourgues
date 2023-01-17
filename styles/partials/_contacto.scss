@@ -8,6 +8,7 @@
   "encabezado encabezado"
   "formulario video";
   grid-column-gap: 80px;
+  margin: 16px;
 
   .encabezadoContacto {
     font-family: 'Rubik Glitch', cursiva;
@@ -49,7 +50,6 @@
   
       .textAreaForm{
         height: 100px;
-        width: 100%;
       }
           
       .casillasForm{

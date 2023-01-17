@@ -8,10 +8,9 @@
   "servicioUno servicioDos servicioTres"
   "servicioCuatro servicioCinco servicioSeis";
   grid-column-gap: 5px;
-  
-  .servicioUno {
-    grid-area: servicioUno;
-      
+  margin: 16px;
+
+  @mixin serviciosPersonalizados{
     .serviciosTitulo {
       color: $colortitulos;
       list-style-type: none;
@@ -24,90 +23,42 @@
       border-radius: 10%;
       padding: 15px;
     }
+  }
+  
+  .servicioUno {
+    grid-area: servicioUno;
+      
+    @include serviciosPersonalizados()  
   }
 
   .servicioDos{
     grid-area: servicioDos;
 
-    .serviciosTitulo {
-      color: $colortitulos;
-      list-style-type: none;
-      font-weight: bold;
-      line-height: 50px;
-    }
-  
-    .serviciosParrafo {
-      background-color: $secondarycolor;
-      border-radius: 10%;
-      padding: 15px;
-    }
+    @include serviciosPersonalizados()  
   }
 
   .servicioTres{
     grid-area: servicioTres;
 
-    .serviciosTitulo {
-      color: $colortitulos;
-      list-style-type: none;
-      font-weight: bold;
-      line-height: 50px;
-    }
-
-    .serviciosParrafo {
-      background-color: $secondarycolor;
-      border-radius: 10%;
-      padding: 15px;
-    }
+    @include serviciosPersonalizados()  
   }
 
   .servicioCuatro{
     grid-area: servicioCuatro;
 
-    .serviciosTitulo {
-      color: $colortitulos;
-      list-style-type: none;
-      font-weight: bold;
-      line-height: 50px;
-    }
-
-    .serviciosParrafo {
-      background-color: $secondarycolor;
-      border-radius: 10%;
-      padding: 15px;
-    } 
+    @include serviciosPersonalizados()  
   }
 
   .servicioCinco{
     grid-area: servicioCinco;
 
-    .serviciosTitulo {
-      color: $colortitulos;
-      list-style-type: none;
-      font-weight: bold;
-      line-height: 50px;
-    }
-
-    .serviciosParrafo {
-      background-color: $secondarycolor;
-      border-radius: 10%;
-      padding: 15px;
-    }
+    @include serviciosPersonalizados()  
   }    
 
   .servicioSeis{
     grid-area: servicioSeis;
 
-    .serviciosTitulo {
-      color: $colortitulos;
-      list-style-type: none;
-      font-weight: bold;
-      line-height: 50px;
-    }
-
-    .serviciosParrafo {
-      background-color: $secondarycolor;
-      border-radius: 10%;
-      padding: 15px;
-    }
+    @include serviciosPersonalizados()  
   }    
 } 
+

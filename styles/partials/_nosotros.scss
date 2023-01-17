@@ -5,12 +5,12 @@
   grid-template-areas: 
   "nosotrosUno nosotrosDos nosotrosTres";
   grid-column-gap: 5px;
+  margin: 16px;
 
   .nosotros {
     background-color: $secondarycolor;
-    padding: 20px;
+    padding: 15px;
     border-radius: 15px;
-    margin-left: 1%;
     font-size: 1.25rem;
     display: flex;
     flex-direction: column;
