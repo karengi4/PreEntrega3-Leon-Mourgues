@@ -19,6 +19,7 @@
 
   section {
     form{ 
+      width: 100%;
       color: black;
       grid-area: formulario;
       display: flex;
@@ -75,5 +76,6 @@
     grid-area: video;
     align-self: center;
     justify-self: center;
+    width: 100%;
   }
 }
