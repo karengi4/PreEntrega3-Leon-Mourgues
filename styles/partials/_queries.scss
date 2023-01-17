@@ -4,6 +4,7 @@
 @media screen and (max-width: 1200px) { 
 }
 
+/* MODIFICADO EL PUNTO DE QUIEBRE 1024px */
 @media screen and (max-width: 1024px) {
 
   header{
@@ -33,29 +34,30 @@
 }
 
 /* MODIFICADO EL PUNTO DE QUIEBRE 768px */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px){
   
   header {
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.1fr 0.5fr;
+    grid-template-columns: 0.5fr 0.5fr;
     grid-template-areas: 
     "logo nombreConsultora"
     "nav nav";
           
     .logo {
       grid-area: logo;
-      justify-self: end;
+      padding-left: 25%;
+      padding-top: 1%;
     }
 
     .nombreConsultora{
-      grid-area: nombreConsultora;
+      grid-area: nombreConsultora;      
     }
 
     nav{
       grid-area: nav;
     }
-  } 
+  }
 
   .menuNosotros{
     display: grid;
@@ -76,7 +78,7 @@
 }
 
 /* MODIFICADO EL PUNTO DE QUIEBRE 425px */
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 425px){
 
   header {
     display: grid;
@@ -87,21 +89,29 @@
     "nombreConsultora"
     "menu";
 
+    .logo{
+      padding-left: 35%;
+    }
+
+    .nombreConsultora{
+      text-align: center;
+    }
+
     nav{
-      grid-area: menu;
-      overflow: hidden;
-      
-      ul{     
-        li{       
+      grid-area: menu;      
+      ul{  
+        flex-wrap: wrap; 
+        justify-content: space-evenly;
+        li{             
           a{
             text-decoration: none;
             cursor:pointer;
-            padding: 2px;
             border-radius: 3px;
+            margin: 5px;
           }
         }
-      }       
-    }
+      }
+    }      
   }
   
   #servicios {
@@ -111,6 +121,7 @@
     "servicioUno servicioDos"
     "servicioTres servicioCuatro"
     "servicioCinco servicioSeis";
+    margin: 0px;
   } 
 
   .menuBusquedas {
@@ -125,41 +136,83 @@
     "encabezado"
     "formulario" 
     "video";
+    grid-row-gap: 1rem;
+  }
+}
+
+/* MODIFICADO EL PUNTO DE QUIEBRE 375px */
+@media screen and (max-width: 375px) {
+  
+  ul{
+    #servicios {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(6, 1fr);
+      grid-template-areas: 
+      "servicioUno"
+      "servicioDos"
+      "servicioTres"
+      "servicioCuatro"
+      "servicioCinco"
+      "servicioSeis";
+    } 
+  }
+
+  section{
+    .menuBusquedas {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat (8, 1fr);
+      
+      div{
+        padding: 0%;
+        margin: 0%;
+      }
+    }
+  }
+  
+  .contacto{
+    margin: 0;
+    padding: 0;
+    .encabezadoContacto{
+      font-weight:normal;
+    }
   }
 }
 
 /* MODIFICADO EL PUNTO DE QUIEBRE 320px */
 @media screen and (max-width: 320px) {
 
-  header{
-    span{
-      .logo a img{
-        width:40px;
-        margin-top: 30px;
-        margin-left: 130px;
-      }
-    }
+  #servicios{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: 
+    "servicioUno" 
+    "servicioDos"
+    "servicioTres"
+    "servicioCuatro"
+    "servicioCinco" 
+    "servicioSeis";
+    grid-row-gap: 0px;
+    margin: 2px;
+    padding: 2px;
+  }
+  .busquedas{
+    text-align: center;
   }
 
-  main{
-    ul{
-      #servicios {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(5, 1fr);
-        grid-template-areas: 
-        "servicioUno"
-        "servicioDos"
-        "servicioTres"
-        "servicioCuatro"
-        "servicioCinco";
-      } 
-    }
+  .menuBusquedas{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 1fr);
+  }
 
-    section{
-      .menuBusquedas {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat (8, 1fr);
-      }
-    }
+  .contacto{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr, 1fr, 1fr;
+    grid-template-areas: 
+    "encabezado" 
+    "formulario" 
+    "video";
   }
 }

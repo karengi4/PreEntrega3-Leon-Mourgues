@@ -71,7 +71,8 @@ header {
           text-decoration: none;
           cursor: pointer;
           border-radius: 3px;
-          text-align: center; }
+          text-align: center;
+          font-size: 1.25rem; }
           header nav ul li a:hover {
             color: whitesmoke;
             background-color: #fd895f;
@@ -221,14 +222,11 @@ footer {
 
 .busquedas {
   font-size: 1.5rem;
-  font-weight: 500;
   line-height: 70px;
-  text-align: center;
-  margin: 16px; }
+  text-align: center; }
 
 .menuBusquedas {
   font-size: 1.25rem;
-  font-weight: 500;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
   display: grid;
@@ -246,9 +244,9 @@ footer {
       background-color: #f19c7d;
       border-radius: 15px;
       color: black;
-      line-height: 1.7em;
-      margin: 20px 10px;
-      flex-basis: 180px; }
+      line-height: 1.7rem;
+      margin: 1.25rem 0.625rem;
+      flex-basis: 11.3rem; }
       .menuBusquedas div .busquedasRecuadro .button {
         background-color: rgba(255, 127, 80, 0.425);
         border-radius: 10%;
@@ -261,13 +259,13 @@ footer {
 
 .contacto {
   font-size: 1.25rem;
-  line-height: 50px;
+  line-height: 3.125rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 0.5fr 0.5fr;
   grid-template-areas: "encabezado encabezado" "formulario video";
-  grid-column-gap: 80px;
-  margin: 16px; }
+  grid-column-gap: 5rem;
+  margin: 1rem; }
   .contacto .encabezadoContacto {
     font-family: 'Rubik Glitch', cursiva;
     font-weight: 600;
@@ -280,24 +278,24 @@ footer {
     display: flex;
     flex-direction: column;
     align-content: space-between;
-    padding: 20px;
+    padding: 0.125rem;
     box-shadow: inset 0 -3em 3em rgba(243, 88, 49, 0.753), 0 0 0 2px rgba(167, 19, 180, 0.527), 0.3em 0.3em 1em rgba(229, 123, 233, 0.952);
     align-self: center;
     justify-self: center; }
     .contacto section form fieldset div .itemForm {
-      margin: 15px; }
+      margin: 1rem; }
     .contacto section form fieldset div .inputContacto {
       padding: 1% 5% 1% 4%; }
     .contacto section form fieldset .casillasForm {
-      margin: 15px; }
+      margin: 1rem; }
     .contacto section form .textAreaForm {
-      height: 100px; }
+      height: 6.25rem; }
     .contacto section form .casillasForm {
-      margin: 15px; }
+      margin: 1rem; }
     .contacto section form .botonesForm {
       background-color: rgba(255, 127, 80, 0.425);
-      padding: 5px;
-      border-radius: 10px;
+      padding: 0.3rem;
+      border-radius: 0.6rem;
       color: aliceblue;
       cursor: pointer; }
       .contacto section form .botonesForm:hover {
@@ -309,6 +307,7 @@ footer {
     justify-self: center;
     width: 100%; }
 
+/* MODIFICADO EL PUNTO DE QUIEBRE 1024px */
 @media screen and (max-width: 1024px) {
   header .logo .nombreConsultora {
     margin: 0;
@@ -329,12 +328,13 @@ footer {
 @media screen and (max-width: 768px) {
   header {
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.1fr 0.5fr;
+    grid-template-columns: 0.5fr 0.5fr;
     grid-template-areas: "logo nombreConsultora" "nav nav"; }
     header .logo {
       grid-area: logo;
-      justify-self: end; }
+      padding-left: 25%;
+      padding-top: 1%; }
     header .nombreConsultora {
       grid-area: nombreConsultora; }
     header nav {
@@ -353,36 +353,70 @@ footer {
     grid-template-columns: 1fr;
     grid-template-rows: 0.5fr 0.5fr 0.5fr;
     grid-template-areas: "logo" "nombreConsultora" "menu"; }
+    header .logo {
+      padding-left: 35%; }
+    header .nombreConsultora {
+      text-align: center; }
     header nav {
-      grid-area: menu;
-      overflow: hidden; }
-      header nav ul li a {
-        text-decoration: none;
-        cursor: pointer;
-        padding: 2px;
-        border-radius: 3px; }
+      grid-area: menu; }
+      header nav ul {
+        flex-wrap: wrap;
+        justify-content: space-evenly; }
+        header nav ul li a {
+          text-decoration: none;
+          cursor: pointer;
+          border-radius: 3px;
+          margin: 5px; }
   #servicios {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "servicioUno servicioDos" "servicioTres servicioCuatro" "servicioCinco servicioSeis"; }
+    grid-template-areas: "servicioUno servicioDos" "servicioTres servicioCuatro" "servicioCinco servicioSeis";
+    margin: 0px; }
   .menuBusquedas {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr; }
   .contacto {
     grid-template-columns: 1fr;
     grid-template-rows: 0.5fr 1fr 0.5fr;
-    grid-template-areas: "encabezado" "formulario"  "video"; } }
+    grid-template-areas: "encabezado" "formulario"  "video";
+    grid-row-gap: 1rem; } }
+
+/* MODIFICADO EL PUNTO DE QUIEBRE 375px */
+@media screen and (max-width: 375px) {
+  ul #servicios {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: "servicioUno" "servicioDos" "servicioTres" "servicioCuatro" "servicioCinco" "servicioSeis"; }
+  section .menuBusquedas {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat 8, 1fr; }
+    section .menuBusquedas div {
+      padding: 0%;
+      margin: 0%; }
+  .contacto {
+    margin: 0;
+    padding: 0; }
+    .contacto .encabezadoContacto {
+      font-weight: normal; } }
 
 /* MODIFICADO EL PUNTO DE QUIEBRE 320px */
 @media screen and (max-width: 320px) {
-  header span .logo a img {
-    width: 40px;
-    margin-top: 30px;
-    margin-left: 130px; }
-  main ul #servicios {
+  #servicios {
+    display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, 1fr);
-    grid-template-areas: "servicioUno" "servicioDos" "servicioTres" "servicioCuatro" "servicioCinco"; }
-  main section .menuBusquedas {
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: "servicioUno"  "servicioDos" "servicioTres" "servicioCuatro" "servicioCinco"  "servicioSeis";
+    grid-row-gap: 0px;
+    margin: 2px;
+    padding: 2px; }
+  .busquedas {
+    text-align: center; }
+  .menuBusquedas {
+    display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat 8, 1fr; } }
+    grid-template-rows: repeat(8, 1fr); }
+  .contacto {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr, 1fr, 1fr;
+    grid-template-areas: "encabezado"  "formulario"  "video"; } }
