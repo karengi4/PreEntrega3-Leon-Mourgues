@@ -43,7 +43,7 @@
     grid-template-areas: 
     "logo nombreConsultora"
     "nav nav";
-          
+              
     .logo {
       grid-area: logo;
       padding-left: 25%;
@@ -172,9 +172,10 @@
   .contacto{
     margin: 0;
     padding: 0;
+    justify-self: center;
     .encabezadoContacto{
       font-weight:normal;
-    }
+    }  
   }
 }
 
@@ -196,6 +197,7 @@
     margin: 2px;
     padding: 2px;
   }
+
   .busquedas{
     text-align: center;
   }
@@ -214,5 +216,25 @@
     "encabezado" 
     "formulario" 
     "video";
+
+    .encabezadoContacto{
+      flex-wrap: nowrap;
+      display:grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr,1fr;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    section {
+      form{ 
+        width: 80%;
+      } 
+    }
+
+    .videoContacto {
+      width: 80%;
+      margin:0;
+    }
   }
 }

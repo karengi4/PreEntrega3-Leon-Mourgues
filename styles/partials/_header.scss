@@ -27,30 +27,22 @@ header {
 
   nav{
     flex-basis: 60%;
-    
-    
+       
     ul {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items:center;
       color: white;
-      line-height: 40px;
+      line-height: 40px;   
       
-      @for $i from 1 through 5{
-        .menuItem:nth-child(#{$i}){
-          animation-delay: $i *0.5s;
-        }
-      }
-
       li{
         font-weight: bold;
         text-align:center;
         align-content: center;
         list-style: none;
         border-radius: 3px;
-
-                
+              
         &:nth-child(5) a{
           color: beige;
         }
@@ -68,6 +60,7 @@ header {
             background-color: rgb(253, 137, 95);
             transition: 0.5s;
           }
+          
         }            
       }
     }

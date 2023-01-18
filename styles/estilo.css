@@ -48,16 +48,6 @@ header {
       align-items: center;
       color: white;
       line-height: 40px; }
-      header nav ul .menuItem:nth-child(1) {
-        animation-delay: 0.5s; }
-      header nav ul .menuItem:nth-child(2) {
-        animation-delay: 1s; }
-      header nav ul .menuItem:nth-child(3) {
-        animation-delay: 1.5s; }
-      header nav ul .menuItem:nth-child(4) {
-        animation-delay: 2s; }
-      header nav ul .menuItem:nth-child(5) {
-        animation-delay: 2.5s; }
       header nav ul li {
         font-weight: bold;
         text-align: center;
@@ -394,7 +384,8 @@ footer {
       margin: 0%; }
   .contacto {
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    justify-self: center; }
     .contacto .encabezadoContacto {
       font-weight: normal; } }
 
@@ -418,4 +409,16 @@ footer {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 0.5fr, 1fr, 1fr;
-    grid-template-areas: "encabezado"  "formulario"  "video"; } }
+    grid-template-areas: "encabezado"  "formulario"  "video"; }
+    .contacto .encabezadoContacto {
+      flex-wrap: nowrap;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr,1fr;
+      flex-direction: column;
+      justify-content: center; }
+    .contacto section form {
+      width: 80%; }
+    .contacto .videoContacto {
+      width: 80%;
+      margin: 0; } }
